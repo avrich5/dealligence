@@ -1,0 +1,23 @@
+# data artifacts — generated / client data, never in repo
+corpus_raw/**
+corpus_txt/**
+out/**
+!**/.gitkeep
+*.parquet
+*.pkl
+*.jsonl
+
+# secrets
+.env
+*.key
+*.pem
+wg*.conf
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# os
+.DS_Store
