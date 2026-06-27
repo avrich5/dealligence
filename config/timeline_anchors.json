@@ -3,7 +3,7 @@
   "_notes": {
     "nda_signed": "corpus-grounded: Chyrva_NDA_bilingual_1004_signed_1__2__f205cf.txt header '09 квітня 2026 р.'",
     "first_contact": "corpus-grounded: WB_relationships_history__11bedf.txt line 1 '02-02-2026'",
-    "sla_signed": "inferred (Andriy 2026-06-27): SLA Effective Date blank in corpus, date from memory. confidence=inferred.",
+    "sla_signed": "corpus-grounded (exact): Telegram Dima 28 April — Dima: дату ставлю с сегодняшнего числа? Andriy: Да, сегодняшнею ок. + SLA_with_sign.pdf sent same day 17:51.",
     "closure": "null — deal still open as of 2026-06-27"
   },
   "anchors": {
@@ -36,6 +36,21 @@
       "date": "2026-02-04",
       "confidence": "exact",
       "note": "corpus-grounded: first message in file 04 February (already in file_dates.json)"
+    },
+    "WB__3__36b676.txt": {
+      "date": "2026-02-24",
+      "confidence": "exact",
+      "note": "corpus-grounded: AI Strategy group Telegram, 24 February — Dima summarizes Zoom meeting results (flow, features, M&A). This is the first sync after onboarding."
+    },
+    "Дима_синк__b1a300.txt": {
+      "date": "2026-02-24",
+      "confidence": "exact",
+      "note": "same event as WB__3__36b676 — Dima February Zoom sync"
+    },
+    "profit_radar_ai_strategy_integration_prd__e90b29.txt": {
+      "date": "2026-04-10",
+      "confidence": "exact",
+      "note": "corpus-grounded: AI Strategy group Telegram, 10 April — Vlad posts profit_radar_ai_strategy_integration_prd.md"
     }
   }
 }
