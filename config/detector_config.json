@@ -1,0 +1,19 @@
+{
+  "deal_id": "wb_mmi_2024",
+  "exclude_sources": [
+    "1853__AGR_Profit_Radar_SLA_IN_RPOCESS_r2__3562bc.txt",
+    "1853__AGR_Profit_Radar_SLA_IN_RPOCESS_r2_RU__b142f1.txt",
+    "1853__AGR_Profit_Radar_SLA_IN_RPOCESS_r3__98e320.txt",
+    "DRAFT__Profit_Radar_SLA_REVSHARE__d79067.txt",
+    "DRAFT__Profit_Radar_SLA_REVSHARE___PR_notes__e14d43.txt",
+    "Profit_Radar_SLA_with_final_edits__c52ce4.txt",
+    "Profit_Radar_SLA_with_sign__2ec5aa.txt"
+  ],
+  "closure_signals": {
+    "revshare": {"type": "anchor", "anchor": "sla_signed"},
+    "execution_control": {"type": "file_date", "date": "2026-05-07"},
+    "data_sharing": {"type": "anchor", "anchor": "sla_signed"},
+    "scope": {"type": "none"}
+  },
+  "min_declared_count": 2
+}
