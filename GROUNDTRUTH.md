@@ -32,9 +32,38 @@
 - user_id/portfolio snapshot: устное согласие WB есть, в запросах не наблюдается.
   Источник: устное свидетельство Andriy. В корпусе текстово НЕ подтверждено.
   confidence_source=oral_andriy. Это гипотеза для детектора, не факт.
+- sla_signed: 2026-04-28. Источник: oral_andriy + corroborating mtime обоих
+  оригинальных файлов (Profit Radar SLA_with final edits.pages и
+  Profit Radar SLA_with_sign.pdf — Apr 28 17:50 в corpus_raw на MacBook).
+  Effective Date в тексте пуст — corpus-grounded дата отсутствует.
+  Использовать в timeline_anchors.json с date_confidence="inferred".
 
 ## 5. Что НЕ установлено (честные пробелы)
 - Подписана ли встречная сторона SLA — неизвестно (копия не прислана). Гипотеза
   Andriy: юристы не отдают из-за двойного смысла для регулятора. UNTESTED.
 - observed_absent почти пуст (3) — детектор declared/observed ещё не построен.
   Текущие 3 — внутрифайловые, не межвременные.
+
+## 6. Архитектура детектора declared/observed (сессия 2026-06-26)
+Детектор трёхпозиционный, не бинарный:
+- `resolved`: declared + парный done после него (есть closure signal)
+- `observed_absent`: declared + closure signal + нет done
+- `unresolved`: declared + нет closure signal (сделка открыта, факт не подтверждён)
+
+Большинство из 432 осей без done — это `unresolved`, не `observed_absent`.
+`unresolved` по критическим осям сам по себе информативен для переговорщика.
+
+Closure signal — артефакт играющий роль дедлайна или подтверждения:
+подписанный документ, дата go-live, технический факт, явный отказ.
+
+## 7. Верифицированные кандидаты на разрыв (corpus-grounded, сессия 2026-06-26)
+- revshare: 101 declared, 1 done («50 на 50 звучало конкретно на комитете»,
+  WB__3__36b676.txt). Closure signal: SLA §5.1. Ни одного done по факту
+  расчёта/выплаты. Статус: observed_absent (контракт подписан, механизм не запущен).
+- execution_control: 187 declared, 5 done. Declared: «execution полностью на стороне
+  MMI, нам только один API-ключ нужен». Done: WB задеплоил собственный executor
+  внутри своей инфраструктуры (wb_call_analysis_PRD___Vlad_Hryhoriev__62ba60.txt).
+  Расхождение по стороне исполнения — обе части corpus-grounded.
+- «то, что не присылает статус апдейта, наверное, вот это минус большой» —
+  Дима, Дима_синк__b1a300.txt. modality: declared | objection | side: MMI.
+  Атрибуция: говорит Дима (WB), не Andriy. Факт подтверждён поиском по corpus.
