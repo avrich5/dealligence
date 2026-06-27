@@ -1,0 +1,41 @@
+{
+  "deal_id": "wb_mmi_2024",
+  "_notes": {
+    "nda_signed": "corpus-grounded: Chyrva_NDA_bilingual_1004_signed_1__2__f205cf.txt header '09 квітня 2026 р.'",
+    "first_contact": "corpus-grounded: WB_relationships_history__11bedf.txt line 1 '02-02-2026'",
+    "sla_signed": "inferred (Andriy 2026-06-27): SLA Effective Date blank in corpus, date from memory. confidence=inferred.",
+    "closure": "null — deal still open as of 2026-06-27"
+  },
+  "anchors": {
+    "sla_signed": "2026-04-28",
+    "nda_signed": "2026-04-09",
+    "first_contact": "2026-02-02",
+    "closure": null
+  },
+  "phases": {
+    "pre_sla": {
+      "from": null,
+      "to": "sla_signed"
+    },
+    "post_sla": {
+      "from": "sla_signed",
+      "to": "closure"
+    },
+    "post_closure": {
+      "from": "closure",
+      "to": null
+    }
+  },
+  "file_date_overrides": {
+    "WhiteBit__8f9be0.txt": {
+      "date": "2026-03-23",
+      "confidence": "exact",
+      "note": "corpus-grounded: Telegram screenshot 23 March, Zoom call with Vlad Hryhoriev"
+    },
+    "WB_telegram_history__2391fa.txt": {
+      "date": "2026-02-04",
+      "confidence": "exact",
+      "note": "corpus-grounded: first message in file 04 February (already in file_dates.json)"
+    }
+  }
+}
