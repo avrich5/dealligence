@@ -38,18 +38,44 @@ State Vector сделки → политики/нарративы/ассисте
 - Не выдумывать факты. Атом без дословной цитаты отклоняется автоматически.
 - Heredoc через SSH ломается. Писать локально + scp, либо python-файлами.
 
+## Авторитетные документы (читать в этом порядке, не пропускать)
+
+| Файл | Что содержит | Менять |
+|---|---|---|
+| CLAUDE.md | машинная память сессий, принципы, запреты | append-only |
+| PROGRESS.md | статус тасков, одна строка на таск | по завершении таска |
+| GROUNDTRUTH.md | верифицированные факты по корпусу | только corpus-grounded |
+| DECISIONS.md | проектные решения, отложенные вопросы | каждое новое решение |
+| concept/00_CONCEPT.md | что строим, архитектура | редко, с обоснованием |
+
+Гейты живут внутри тасок (tasks/CLAUDE_CODE_TASK_NN_*.md).
+CHECKLIST.md — ретроспектива пройденных гейтов, не источник истины.
+Шаблон отчёта — docs/templates/SESSION_REPORT_TEMPLATE.md.
+
 ## Цикл работы (каждая сессия Claude Code)
-1. Прочитать CLAUDE.md, PROGRESS.md, GROUNDTRUTH.md.
+1. Прочитать: CLAUDE.md → PROGRESS.md → GROUNDTRUTH.md → DECISIONS.md.
 2. Взять один таск из tasks/. Не смешивать аналитику и реализацию.
 3. Проверить баланс биллинга ДО прогона (если будут LLM-вызовы).
 4. Сделать шаг. Каждый факт — со ссылкой на источник (файл:строка или атом id).
-5. Завершить session-отчётом по SESSION_REPORT_TEMPLATE.md в reports/.
+5. Завершить session-отчётом по docs/templates/SESSION_REPORT_TEMPLATE.md → reports/.
 6. Обновить одну строку PROGRESS.md.
+7. Новое решение → одна запись в DECISIONS.md.
 
 ## Состояние артефактов (append-only журнал)
 
+### 2026-06-27 — TASK 02: сходимость онтологии
+- 4 скрипта в scripts/: axes_distribution, cluster_axes, cluster_types,
+  apply_decisions, orphan_patch, build_ontology_yaml, normalize_atoms.
+- 478 сырых осей → 74 канонических (LLM-кластеризация + ручные решения Andriy).
+- 85 сырых типов → 9 канонических.
+- Orphan patch: 235 осей не попали в LLM-кластеризацию, сопоставлены вручную.
+  Покрытие поднято с 88.2% до 99.2% (2107/2124 атомов).
+- Артефакты: config/ontology.yaml, out/atoms_canon.jsonl (поля about_canon/type_canon).
+- Детектор трёхпозиционный: resolved / observed_absent / unresolved.
+  Зафиксировано в GROUNDTRUTH §6.
+- Гипотеза доказана в живом примере: атрибуция «status update» → Дима (corpus),
+  не Andriy. Человеческая память потеряла источник, система нашла дословно.
 ### 2026-06-26 — Каркас + атомизация корпуса
-- Структура проекта поднята по паттерну adaptive_aisa.
 - ingest: LibreOffice (.docx/.pages) + pdfminer (text PDF), дедуп по stem.
   34/43 файла нормализованы. 2 фейла: пустой скан-PDF, .key (низкий приоритет).
 - atomizer: эмерджентная онтология, anti-fabrication, LLM через orchestrator.
@@ -74,4 +100,5 @@ State Vector сделки → политики/нарративы/ассисте
   не подтверждено — помечать confidence_source=oral_andriy).
 
 ## Gates
-См. CHECKLIST.md — бинарные критерии. Каждый может дать «нет».
+Гейты каждого таска — внутри tasks/CLAUDE_CODE_TASK_NN_*.md.
+CHECKLIST.md — ретроспектива (только закрытые [x] с датой), не живой чеклист.
