@@ -51,6 +51,41 @@
       "date": "2026-04-10",
       "confidence": "exact",
       "note": "corpus-grounded: AI Strategy group Telegram, 10 April — Vlad posts profit_radar_ai_strategy_integration_prd.md"
+    },
+    "DRAFT__Profit_Radar_SLA_REVSHARE__d79067.txt": {
+      "date": "2026-04-22",
+      "confidence": "exact",
+      "note": "corpus-grounded: Telegram Dima, 22 April — Dima sends [DRAFT] Profit Radar SLA REVSHARE.docx at 14:00"
+    },
+    "DRAFT__Profit_Radar_SLA_REVSHARE___PR_notes__e14d43.txt": {
+      "date": "2026-04-22",
+      "confidence": "exact",
+      "note": "corpus-grounded: same package as DRAFT REVSHARE, 22 April"
+    },
+    "1853__AGR_Profit_Radar_SLA_IN_RPOCESS_r2__3562bc.txt": {
+      "date": "2026-04-28",
+      "confidence": "exact",
+      "note": "corpus-grounded: Telegram Dima, 28 April — Dima sends [1853] AGR Profit Radar SLA_IN RPOCESS_r2.docx at 11:29"
+    },
+    "1853__AGR_Profit_Radar_SLA_IN_RPOCESS_r2_RU__b142f1.txt": {
+      "date": "2026-04-28",
+      "confidence": "exact",
+      "note": "corpus-grounded: same package as r2, 28 April (RU version)"
+    },
+    "1853__AGR_Profit_Radar_SLA_IN_RPOCESS_r3__98e320.txt": {
+      "date": "2026-04-28",
+      "confidence": "exact",
+      "note": "corpus-grounded: Telegram Dima, 28 April — Andriy sends r3 back same day at 11:30"
+    },
+    "Profit_Radar_SLA_with_final_edits__c52ce4.txt": {
+      "date": "2026-04-28",
+      "confidence": "exact",
+      "note": "corpus-grounded: Telegram Dima, 28 April — Dima sends Profit Radar SLA_with final edits.docx at 16:44"
+    },
+    "Profit_Radar_SLA_with_sign__2ec5aa.txt": {
+      "date": "2026-04-28",
+      "confidence": "exact",
+      "note": "corpus-grounded: Telegram Dima, 28 April — Andriy sends signed PDF at 17:51"
     }
   }
 }
