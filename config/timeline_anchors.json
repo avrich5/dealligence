@@ -86,6 +86,61 @@
       "date": "2026-04-28",
       "confidence": "exact",
       "note": "corpus-grounded: Telegram Dima, 28 April — Andriy sends signed PDF at 17:51"
+    },
+    "Влад_синк__0fcba7.txt": {
+      "date": "2026-06-23",
+      "confidence": "inferred",
+      "note": "mtime: Влад синк.txt Jun 23 19:17"
+    },
+    "WB_Dima_Vlad__aad065.txt": {
+      "date": "2026-06-04",
+      "confidence": "inferred",
+      "note": "mtime: WB Dima Vlad.txt Jun 4 08:58"
+    },
+    "WB_Dima_Vlad_meeting_notes__a63776.txt": {
+      "date": "2026-06-04",
+      "confidence": "inferred",
+      "note": "mtime: WB Dima Vlad meeting notes.docx Jun 4 09:46"
+    },
+    "WhiteBit___ProfitRadar_MVP__Claude__55d82d.txt": {
+      "date": "2026-03-22",
+      "confidence": "inferred",
+      "note": "mtime: WhiteBit - ProfitRadar MVP (Claude).docx Mar 22 13:06"
+    },
+    "profit_radar_mvp_integration_requirements__210f26.txt": {
+      "date": "2026-03-19",
+      "confidence": "inferred",
+      "note": "mtime: profit_radar_mvp_integration_requirements.md Mar 19 21:04"
+    },
+    "TODO_WHITEBIT_INTEGRATION__208070.txt": {
+      "date": "2026-04-14",
+      "confidence": "inferred",
+      "note": "mtime: TODO_WHITEBIT_INTEGRATION.md Apr 14 05:46"
+    },
+    "SERVICE_LEVEL_AGREEMENT__SLA__3fb1ac.txt": {
+      "date": "2026-05-04",
+      "confidence": "inferred",
+      "note": "mtime: SERVICE LEVEL AGREEMENT (SLA).txt May 4 20:17"
+    },
+    "PRD___Vlad_Hryhoriev_short__c6503c.txt": {
+      "date": "2026-05-07",
+      "confidence": "inferred",
+      "note": "mtime: PRD - Vlad Hryhoriev-short.txt May 7 11:27"
+    },
+    "Ageement_discuss___1__47b7f4.txt": {
+      "date": "2026-04-23",
+      "confidence": "inferred",
+      "note": "mtime: Ageement discuss - 1.txt — same session as full 2026-04-23"
+    },
+    "Ageement_discuss___2__1e772c.txt": {
+      "date": "2026-04-23",
+      "confidence": "inferred",
+      "note": "mtime: Ageement discuss - 2.txt — same session as full 2026-04-23"
+    },
+    "Ageement_discuss___3__451e87.txt": {
+      "date": "2026-04-23",
+      "confidence": "inferred",
+      "note": "mtime: Ageement discuss - 3.txt — same session as full 2026-04-23"
     }
   }
 }
